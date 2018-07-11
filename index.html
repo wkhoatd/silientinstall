@@ -1,5 +1,1195 @@
 <html>
-<body>
-dasdas
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    -->
+  
+     <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.js"></script>-->
+      <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
+      
+<style>
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.progress {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+fieldset{
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 2 2 2 2 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+
+	-webkit-background-size: 100% 100%;
+	background: url(images/newapp/bgNewApp1.jpg) no-repeat ;
+}
+
+legend{
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: left !important;
+	color: yellow; 
+	width:auto;
+	border-radius: 8px;
+	border: 1px groove #ddd !important;
+	padding:0 10px;
+	border-bottom:none;
+	background: url(images/newapp/bgNewApp1.jpg) no-repeat ;	
+}
+
+input{
+	opacity: 0.7;	
+}
+
+div.editable {
+	width: 300px;
+	height: 100px;
+	max-height: 100px;
+	overflow-y: scroll;
+	border: 1px solid #ccc;
+    opacity: 0.7;	
+	padding: 5px;
+}
+div.divEdit {
+	width: 100%;
+	height: 100px;
+	max-height: 100px;
+	overflow-y: scroll;
+	border: 1px solid #ccc;
+	opacity: 0.7;	
+	padding: 5px;
+}
+
+
+strong {
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    min-height: 30px;    
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+    border: 1px groove #ddd !important;    
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+</style>
+<script language='javascript'>
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function getDivProgress(strPackage, strDefaultWidth, strDefaultText)
+{
+	var pg=document.getElementById("pg" + strPackage);
+	var tr=document.getElementById("tr_" + strPackage);	
+	if (pg==null)
+	{
+		var intIndex1= tr.rowIndex;
+		//spn1.innerText= "a" + intIndex1;
+		var trpg= tblList.insertRow(intIndex1+1);
+
+		trpg.outerHTML= "<tr id= 'trpg" + strPackage + "'><td colspan=4 align=center><div class='progress' width='100px'>" +
+	  			  	    "<div id= 'pg" + strPackage + "' class='progress-bar progress-bar-success active' role='progressbar' aria-valuenow='0'" +
+	  				    "aria-valuemin='0' aria-valuemax='100' style='width:" + strDefaultWidth + "%'>" + strDefaultText + "</div>" +
+					    "</div></td></tr>";	
+	}else
+	{
+		pg.style.width= strDefaultWidth + '%';
+		pg.innerHTML= strDefaultText;	
+	}
+		
+	return pg;
+}
+
+function unInstall(objtd)
+{
+	//alert("a");
+	//spn1.innerText= "strPackage";
+	var objtr= objtd.parentNode.parentNode;
+    var strPackage= objtr.getAttribute("strPackage");
+    
+    var objtd1= document.getElementById("td_" + strPackage);
+	var strAppName= objtd1.innerText;
+	var strIsInstalled= objtd1.getAttribute("strIsInstalled");
+	//spn1.innerText=strIsInstalled;
+    if (strIsInstalled!='1')
+    {
+    	showToast("The app '" + strAppName + " is nerver instaled!");
+    	
+    	return;
+    }	
+    //var strApkUrl= objtr.getAttribute("strApkUrl");   
+    //spn1.innerText= strPackage;
+    
+	window.HTMLOUT.installApp(strPackage, '', '1');
+	//notifyUninstall("1");
+
+	var pg= getDivProgress(strPackage, "0", "Uninstalling the app");//document.getElementById("pg" + strPackage);
+}
+
+function install(objtd, strIsUninstall)
+{
+	//alert("a");
+	
+	var objtr= objtd.parentNode.parentNode;
+    var strPackage= objtr.getAttribute("strPackage");
+    
+	var objtd1= document.getElementById("td_" + strPackage);
+	var strIsLive= objtd1.getAttribute("is_live");
+	var strAppName= objtd1.innerText;
+		
+	if (strIsLive!= "1")
+	{
+		showToast("The app '" + strAppName + "' can't install beause its url is died!");
+		
+		return;	
+	}	
+    var strApkUrl= objtr.getAttribute("strApkUrl");   
+    	
+	window.HTMLOUT.installApp(strPackage, strApkUrl, strIsUninstall);	
+	if (strIsUninstall=="1")
+	{
+		var pg= getDivProgress(strPackage, "0", "Unstalling the app");//document.getElementById("pg" + strPackage);
+	}else
+	{
+		var pg= getDivProgress(strPackage, "0", "Downloading the app ( 0kb/s - 0%)");//document.getElementById("pg" + strPackage);
+	}
+	
+}
+
+var timer = 0;
+var delay = 200;
+var prevent = false;
+
+var arrPackages = ["com.idsapp.datausage", "com.nuvstudio.music", "com.appasstdki.assistant", "com.movapp.office", "com.scrfaapp.screenrecorder", "com.ttsapp.note", 
+	               "com.mpbcapp.mobileprint", "com.stoapp.textocr", "com.sduapp.smartdiskusage", "com.rmcapp.mirror", "com.szcapp.zoomcamera", 
+                   "com.gqxvapp.gieoque", "com.msapp.scanner", "com.rbsapp.readspeech", "com.bcmnapp.boith", "com.ralbapp.books", "com.fcapp.financialcals", 
+                   "com.fdapp.financial", "com.qrabapp.qrbarcode", "com.msaapp.maths", "com.hcapp.handycal", "com.tdk.obfocativesmali", 
+				   "com.tatcdapp.tienganh", "com.hntaapp.tienganh"];
+var arrUrls = ["http://bit.ly/InternetDataUsage_InOD", "http://bit.ly/TDKMusic_InOD", "http://bit.ly/AssistantOfWorld_InOD", "http://bit.ly/MiniDocsViewer_InOD", "http://bit.ly/ScreenRecorder_InOD", "http://bit.ly/SpeechToTextNotes_InOD", 
+	           "http://bit.ly/MobilePrintBasedChrome_InOD", "http://bit.ly/SmartTextOCR_InOD", "http://bit.ly/SmartDiskUsage_InOD", "http://bit.ly/RealMirrorCamera_InOD", "http://bit.ly/SmartZoomCamera_InOD",
+               "http://bit.ly/GieoQueXemViec_InOD", "http://bit.ly/MobileScanner_InOD", "http://bit.ly/ReadBySpeech_InOD", "http://bit.ly/BoiChoMoiNguoi_InOD", "http://bit.ly/ReadandListenBook_InOD", "http://bit.ly/FinancialCals_InOD", 
+               "http://bit.ly/FinancialDictionary_InOD", "http://bit.ly/QRandBarcodeScanner_InOD", "http://bit.ly/MathSolverForAll_InOD", "http://bit.ly/HandyCalcs_InOD", "http://bit.ly/ObfuscateSmali_InOD", 
+			   "http://bit.ly/TiengAnhTheoChuDd_InOD", "http://bit.ly/HocNgheTiengAnh_InOD"];
+
+function openOrInstallApp(objtd)
+{
+	clearTimeout(timer);
+    prevent = true;
+    
+    var objtr= objtd.parentNode;
+    var strPackage= objtr.getAttribute("strPackage");
+    var strApkUrl= objtr.getAttribute("strApkUrl");    
+	//spn1.innerText= "" + strPackage + "" + strApkUrl;
+	window.HTMLOUT.openOrInstallApp(strPackage, strApkUrl);
+
+    var pg= getDivProgress(strPackage, "0", "Opening the app " + strPackage);//document.getElementById("pg" + strPackage);
+	
+}
+
+function checkInstalledPackages(arrPackages, arrUrls)
+{
+	for(var inti=0; inti< arrPackages.length; inti++)
+	{
+		var strPackage= arrPackages[inti];
+		
+		window.HTMLOUT.checkPackageExists(strPackage);
+		
+		pausecomp(5);
+	}
+}
+
+function getFileSizes(arrPackages, arrUrls)
+{		
+	for(var inti=0; inti< arrPackages.length; inti++)
+	{
+		var strPackage= arrPackages[inti];
+		var strUrl= arrUrls[inti];		
+		
+		setTimeout(getFileSize, 100, strPackage, strUrl );   
+		pausecomp(100);
+	}
+}
+
+function pausecomp(millis)
+{
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+}
+
+function getFileSize(strPackage, strUrl)
+{		
+	window.HTMLOUT.getFileSize(strPackage, strUrl);		
+}
+
+function getNewApps()
+{
+	window.HTMLOUT.getNewApps();
+}
+
+function setNewAppBackground()
+{
+	var intRan= getRandomInt(1, 21);
+	//spn1.innerText= "" + intRan;
+	var strImgUrl= "images/newapp/bgNewApp" + intRan + ".jpg";
+	
+	var fsNewApp= document.getElementById("fsNewApp");
+	var lgNewApp= document.getElementById("lgNewApp");
+	
+	fsNewApp.style.background= "url(" + strImgUrl + ")";
+	
+	//var intRan1= getRandomInt(1, 4);
+	//var strImgUrl1= "images/newapp/bgNewApp" + intRan1 + ".jpg";
+	
+	lgNewApp.style.background= "url(" + strImgUrl + ")";
+	
+	//spn1.innerText= strImgUrl;
+}
+
+function readyStateChanged() {
+	setTimeout(getNewApps, 1);   
+	setTimeout(setNewAppBackground, 10);  	
+	
+	getFileSizes(arrPackages, arrUrls);
+	checkInstalledPackages(arrPackages, arrUrls); 
+}
+
+function showHiddenDesc(objtd)	
+{
+	timer = setTimeout(function() {
+      if (!prevent) {
+        //doClickAction();
+        var objtr= objtd.parentNode;
+        var strPackage= objtr.getAttribute("strPackage");
+        //spn1.innerText= strPackage;
+        var trDesc=document.getElementById("trDesc_" + strPackage);
+	
+	    if (trDesc.style.display == '') {
+	      trDesc.style.display = 'none';
+	    }
+	    else {
+	      trDesc.style.display = '';
+        }	
+      }
+      prevent = false;
+    }, delay);
+    	
+}
+
+function showDetail(objtd)	
+{
+        var objtr= objtd.parentNode;
+        var strPackage= objtr.getAttribute("strPackage");
+        var strApkUrl= objtr.getAttribute("strApkUrl");
+        var strAppName= objtd.innerText;
+        //spn1.innerText= strPackage;
+        var trDesc=document.getElementById("trDesc_" + strPackage);
+        var strDesc= trDesc.innerHTML;
+		
+		txtAppName.value= strAppName;
+    	txtPackage.value= strPackage;
+        document.getElementById("txtPackage").setAttribute("org", strPackage);
+    	txtUrl.value= strApkUrl;
+    	txtDesc.innerHTML= strDesc;
+}
+
+function onDivEditFocus(objDiv)
+{
+	//spn1.innerText='a';
+	objDiv.style.color= "black";
+	
+	if (objDiv.innerText=="Enter description about app ( can paste formated in word text)")
+	{
+		objDiv.innerText= "";
+	}
+}
+
+function onDivEditBlur(objDiv)
+{
+	if (objDiv.innerText=="")
+	{
+		objDiv.innerText= "Enter description about app ( can paste formated in word text)";
+		objDiv.style.color= "#999999";
+	}
+	
+}
+
+function addApp()
+{
+	var strAppName= txtAppName.value.trim();	
+	var strPackage= txtPackage.value.toLowerCase().trim();	
+	var strUrl= txtUrl.value.trim();
+	var strDesc= txtDesc.innerHTML.trim();	
+	if (txtDesc.innerText=="Enter description about app ( can paste formated in word text)")	
+	{
+	   strDesc= "";
+	}	
+		
+	//check exists
+	var objtr=document.getElementById("tr_" + strPackage);	
+	if (strAppName=="")
+	{
+	   showToast("Enter App Name, please!");
+	   txtAppName.focus();
+	   return;	
+	}	
+	if (strPackage=="")
+	{
+	   showToast("Enter Package, please!");
+	   txtPackage.focus();
+	   return;	
+	}	
+	if (strUrl=="")
+	{
+	   showToast("Enter App File Url, please!");
+	   txtUrl.focus();
+	   return;	
+	}			
+	if (objtr!=null)
+	{
+	   showToast("This app is exists");
+	   return;	
+	}
+	
+	window.HTMLOUT.addApp(strAppName, strPackage, strUrl, strDesc);		
+}
+
+function updateApp()
+{
+	var strAppName= txtAppName.value.trim();
+	var strOrgPackage= document.getElementById("txtPackage").getAttribute("org");
+	var strPackage= txtPackage.value.toLowerCase().trim();	
+	var strUrl= txtUrl.value.trim();
+	var strDesc= txtDesc.innerHTML.trim();	
+	if (txtDesc.innerText=="Enter description about app ( can paste formated in word text)")	
+	{
+	   strDesc= "";
+	}	
+		
+	//check exists
+	var objtr=document.getElementById("tr_" + strOrgPackage);	
+	if (strAppName=="")
+	{
+	   showToast("Enter App Name, please!");
+	   txtAppName.focus();
+	   return;	
+	}	
+	if (strPackage=="")
+	{
+	   showToast("Enter Package, please!");
+	   txtPackage.focus();
+	   return;	
+	}	
+	if (strUrl=="")
+	{
+	   showToast("Enter App File Url, please!");
+	   txtUrl.focus();
+	   return;	
+	}			
+	if (objtr==null)
+	{
+	   showToast("Can't update because this app is not exists");
+	   return;	
+	}
+	
+	window.HTMLOUT.updateApp(strOrgPackage, strAppName, strPackage, strUrl, strDesc);		
+}
+
+function removeApp()
+{
+	var strOrgPackage= txtPackage.getAttribute("org");
+		
+	//check exists
+	var objtr=document.getElementById("tr_" + strOrgPackage);	
+	var objtd=document.getElementById("td_" + strOrgPackage);	
+	if (objtr==null || objtd==null)
+	{
+	   showToast("Can't remove this app because it is not exists");
+	   return;	
+	}
+	var strIsNew= objtr.getAttribute("is_new");
+	var strAppName= objtd.innerText;
+	if (strIsNew=="1")
+	{
+		window.HTMLOUT.removeApp(strOrgPackage, strAppName);		
+	}else
+	{
+		showToast("Can't remove this app because it is not your new app");
+	}
+	
+	
+}
+
+function showToast(strMsg) {
+    var objToast = document.getElementById("snackbar");
+    objToast.innerText= strMsg;
+    objToast.className = "show";
+    setTimeout(function(){ objToast.className = objToast.className.replace("show", ""); }, 3000);
+}
+
+//$(document).on('readystatechange', readyStateChanged); 
+document.onreadystatechange = function () {
+  if (document.readyState === "interactive") {
+    readyStateChanged();
+  }
+}
+</script>	
+<body >
+<table class="blueTable" id="tblList">
+<thead>
+<tr>
+<th>App Name ( click each row )</th>
+<th width=34px>Uni</th>
+<th width=34px>Ins</th>
+<th width=34px>UnIn</th>
+</tr>
+</thead>
+<!--<tfoot>
+<tr>
+<td colspan="3">
+<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+</td>
+</tr>
+</tfoot>-->
+<tbody>
+<!------------------------------------------------>		
+<tr id="tr_com.tdk.obfocativesmali" strPackage="com.tdk.obfocativesmali" strApkUrl="http://bit.ly/ObfuscateSmali_InOD">
+<td id= "td_com.tdk.obfocativesmali" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Obfuscate Smali</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.tdk.obfocativesmali" style="display:none"><td colspan=4>
+<p>The app 'Obfuscate Smali' allows to obfuscate smali code of any file apk that decomplier to smali by EasyApkDisassembler ( use apktool ) <br /><br />Link download: <a href="https://bit.ly/ObfuscateSmali" target="_blank">ObfuscativeSmali.apk</a></p>
+<p>Link Config.txt Demo: <a title="Config.txt" href="http://bit.ly/ObfuscateSmaliConfigDemo" target="_blank">config.txt</a></p>
+<p>Link EasyApkDisassembler: <a title="EasyApkDisassembler v1.3.2" href="http://bit.ly/EasyApkDisassembler" target="_blank">EasyApkDisassembler v1.3.2</a></p>
+<p>Intro Video: <a title="https://youtu.be/PHHv-QqMKlU" href="https://youtu.be/PHHv-QqMKlU" target="_blank">https://youtu.be/PHHv-QqMKlU</a> <br /><br />Features:</p>
+<ul>
+<li>Allow to load ofuscating config from url ( default: http://192.168.1.100/config.txt) Example format of file config.txt:<br />CompressSmaliUrl: http://192.168.1.102/dis_com.visionobjects.calculator.zip<br />PathToObfocative: com/visionobjects/calculator<br />PackageToObfocative: com/hcapp/handycal<br />ClassPathException: com/hcapp/handycal/AboutActivity <br />com/hcapp/handycal/CalcActivity <br />Meaning:<br />- PathToObfocative: path to analysis class names<br />- PackageToObfocative: package to filter when obfuscate origin dir (smali) <br />- ClassPathException: list of class paths to not obfuscate</li>
+<li>Allow to self enter params to obfuscate (CompressSmaliUrl, PathToObfocative, PackageToObfocative, ClassPathException)</li>
+<li>Allow to enter port of http link of result file</li>
+<li>Allow to show progress bar and log when obfuscating ( download zip smali file, decompress file .zip, obfuscate, compress result to a file .zip, write log to a file, return to the first screen to view result url to download )</li>
+<li>Allow to remove temporary files</li>
+<li>Allow to share to socials network</li>
+</ul>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.idsapp.datausage" strPackage="com.idsapp.datausage" strApkUrl="http://bit.ly/InternetDataUsage_InOD">
+<td id= "td_com.idsapp.datausage" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Internet Data Usage</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.idsapp.datausage" style="display:none"><td colspan=4>
+<p>The app 'Internet Data Usage' allows you take control of your mobile data usage and save money on your monthly phone bill</p>
+<p>Link download: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fv5758.app.goo.gl%2FInternetDataUsage&amp;t=NzEyNDMyODY0NTQ0ZTk1Yzk2OTBjOTg3MWM3ODgzNjg0ODEyYWVmZixJQmFTVzZOdg%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174013876071%2Fthe-app-internet-data-usage" target="_blank">InternetData Usage.apk</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2F8RbR8lY04YQ&amp;t=YzFlNGQyNDk0OTE4ZWY3OWE0ZjVlOWM5NmE1YTNiMWJlZmRhNGM5MCxJQmFTVzZOdg%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174013876071%2Fthe-app-internet-data-usage">https://youtu.be/8RbR8lY04YQ</a></p>
+<p>Features:<br />&nbsp; &middot; Allow to monitor your data usage on mobile, Wifi, and roaming.<br />&nbsp; &middot; Allow to monitor how many call minutes or text messages you have left<br />&nbsp; &middot; Allow to set custom usage alarms to avoid overage charges and bill shock in Alarms<br />&nbsp; &middot; Allow to know what apps are using the most data, avoid data overage via background app refresh.<br />&nbsp; &middot; Allow to check data usage across everyone in your shared or family plan.<br />&nbsp; &middot; Allow to manage data across multiple devices and check data usage with one tap.<br />&nbsp; &middot; Allow to track historical consumption to ensure you&rsquo;re on the right data plan.<br />&nbsp; &middot; Allow to maximize how you use your data and get more out of your plan."</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.msaapp.maths" strPackage="com.msaapp.maths" strApkUrl="http://bit.ly/MathSolverForAll_InOD">
+<td id= "td_com.msaapp.maths" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Math Solver for all</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.msaapp.maths" style="display:none"><td colspan=4>
+<p>The app &lsquo;Math Solver for all&rsquo; allows to solver problems with&nbsp; step by step description about maths<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.msaapp.maths&amp;t=ZWU3YTc5ZmM0YTdmYzZjODhlNGZkZjMxZjBiNTU3ZjczOTQ3MmQ5MSxDYmhJenBwZA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006486791%2Fthe-app-math-solver-for-all">https://play.google.com/store/apps/details?id=com.msaapp.maths</a></p>
+<p>Intro Video:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FAiYInseTkR0&amp;t=MDI4YjVlNjZjMjEzYjM5MDdiZDU5N2E4NmUzMjIxNmNkZTQ1MzQyZSxDYmhJenBwZA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006486791%2Fthe-app-math-solver-for-all">https://youtu.be/AiYInseTkR0</a></p>
+<p>Feature:<br />&nbsp; - Allow to solve equations about algebra, integrals, limits, trigonometry, logarithms&nbsp;<br />&nbsp; - Allow to draw grapth of function<br />&nbsp; - Allow to generate problems and solve them</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.nuvstudio.music" strPackage="com.nuvstudio.music" strApkUrl="http://bit.ly/TDKMusic_InOD">
+<td id= "td_com.nuvstudio.music" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">TDK Music</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.nuvstudio.music" style="display:none"><td colspan=4>
+<p>The app 'TDK Music' allows to search, play and download online, offline musics</p>
+<p>Link download: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fv5758.app.goo.gl%2FTDKMusic&amp;t=YWQwN2U2NWUxY2U4NjQwMDExOTNmOGQyYjVhZTI0MTBkNGRmYjUwNSxZMDcwUWVLbA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989743156%2Fthe-app-tdk-music" target="_blank">TDKMusic.apk</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FdVdX4U_iv00&amp;t=ZmExZWU3ZTQxZjY5YzQ1OGNmMDZkZGFmYWU5NDZiY2FlZGQ5NWFhMSxZMDcwUWVLbA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989743156%2Fthe-app-tdk-music">https://youtu.be/dVdX4U_iv00</a></p>
+<p>Features:<br />&nbsp; - Allow to search musics on soudcloud by any keyword<br />&nbsp; - Allow to manage musics by library, favourites, songs, artists, albums,and genres<br />&nbsp; - Allow to play, download or add to favourites musics<br />&nbsp; - Allow to share app link to other apps<br />&nbsp; - Allow to play next, prev, stop playing music&nbsp;<br />&nbsp; - Allow to auto play next music&nbsp;<br />&nbsp; - Allow to play music with scrolling lyrics&nbsp;<br />&nbsp; - Allow to edit and save lyrics of selected music&nbsp;</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.hcapp.handycal" strPackage="com.hcapp.handycal" strApkUrl="http://bit.ly/HandyCalcs_InOD">
+<td id= "td_com.hcapp.handycal" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Handy Calcs</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.hcapp.handycal" style="display:none"><td colspan=4>
+<p>The app 'Handy Calcs' allows to calculate mathematical expressions ( +, -, x, :, sqr(x) of n, sqrt(x) of n, sin, cos, tan, cotan, log, ln) that written by handy on its screen.</p>
+<p>Link download: <a title="Handy Calcs" href="https://bit.ly/HandyCalcs_InOD" target="_blank">https://bit.ly/HandyCalcs_InOD</a></p>
+<p>Intro Video: <a title="https://youtu.be/wKJnaVa-cV8" href="https://youtu.be/wKJnaVa-cV8" target="_blank">https://youtu.be/wKJnaVa-cV8</a></p>
+<p>Features:<br />- Allow to write mathematical expressions by handy<br />- Support to cal expressions of algebra, trigonometric, logarit<br />- Allow back, forward, delete result of calculation<br />- Allow to share result to socials network<br />- Allow to customize the app by configing settings</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.tatcdapp.tienganh" strPackage="com.tatcdapp.tienganh" strApkUrl="http://bit.ly/TiengAnhTheoChuDd_InOD">
+<td id= "td_com.tatcdapp.tienganh" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Tiếng Anh theo chủ đề</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.tatcdapp.tienganh" style="display:none"><td colspan=4>
+<p>Ứng dụng Tiếng Anh theo chủ đề cho ph&eacute;p hoc nghe v&agrave; n&oacute;i tiếng Anh theo c&aacute;c chủ để th&ocirc;ng dụng</p>
+<p>Link download: <a title="Tiếng Anh theo chủ đề" href="http://bit.ly/TiengAnhTheoChuDd_InOD" target="_blank">http://bit.ly/TiengAnhTheoChuDd_InOD</a></p>
+<p>Đặc điểm:<br />- Học nghe v&agrave; n&oacute;i c&aacute;c c&acirc;u thường gặp của 16 chủ đề th&ocirc;ng dụng<br />- Hỗ trợ t&iacute;nh năng kiểm tra khi xem v&agrave; nghe mỗi c&acirc;u<br />- Hỗ trợ t&igrave;m kiếm c&aacute;c c&acirc;u tiếng Anh để nghe<br />- Hỗ trợ học tr&ecirc;n m&agrave;n h&igrave;nh kh&oacute;a</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.hntaapp.tienganh" strPackage="com.hntaapp.tienganh" strApkUrl="http://bit.ly/HocNgheTiengAnh_InOD">
+<td id= "td_com.hntaapp.tienganh" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Học nghe Tiếng Anh</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.hntaapp.tienganh" style="display:none"><td colspan=4>
+<p>Ứng dụng Học nghe Tiếng Anh cho ph&eacute;p luyện nghe tiếng anh theo từng b&agrave;i học hội thoại v&agrave; video.</p>
+<p>Link download: <a title="Học nghe Tiếng Anh" href="http://bit.ly/HocNgheTiengAnh_InOD" target="_blank">http://bit.ly/HocNgheTiengAnh_InOD</a></p>
+<p>C&aacute;c đặc điểm:<br />- Luyện nghe theo từng chủ đề hội thoại c&oacute; nhớ % ho&agrave;n th&agrave;nh<br />- Luyện nghe qua c&aacute;c b&agrave;i video từ cơ bản đến n&acirc;ng cao<br />- Luyện nghe theo cụm từ<br />- Nghe h&agrave;ng trăm c&aacute;c từ cơ bản<br />- T&igrave;m hiểu c&aacute;c ngữ ph&aacute;p<br />- Xem c&aacute;c c&acirc;u th&agrave;nh ngữ</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.appasstdki.assistant" strPackage="com.appasstdki.assistant" strApkUrl="http://bit.ly/AssistantOfWorld_InOD">
+<td id= "td_com.appasstdki.assistant" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Assistant Of World</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.appasstdki.assistant" style="display:none"><td colspan=4>
+<p>The app &lsquo;Assistant of World&rsquo; allows to users make questions and receive result from the app by english text and voice.</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.appasstdki.assistant&amp;t=ZjdjNTg0MTZlOTMyNjc5YTlkZDc5MWEyNmNhZTcyMTcyYmZhNjQ4ZixoVGw5ZFk2TQ%3D%3D&amp;b=t%3ATXUgHeQQIHmQi7l6U0-Zxg&amp;p=https%3A%2F%2Fassistantofworld.tumblr.com%2Fpost%2F174593164038%2Fthe-app-assistant-of-world" target="_blank">Assistant Of World in google play</a>&nbsp;for android version above 23<br />&nbsp;&nbsp;Or<br />&nbsp;&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fv5758.app.goo.gl%2FAsistantOfWorld&amp;t=ZjY4MTZmMzE4OWVmY2Y5MTNhN2RjZGE4Nzk2NGUzYWI1ODMwY2MxNyxoVGw5ZFk2TQ%3D%3D&amp;b=t%3ATXUgHeQQIHmQi7l6U0-Zxg&amp;p=https%3A%2F%2Fassistantofworld.tumblr.com%2Fpost%2F174593164038%2Fthe-app-assistant-of-world" target="_blank">Asistant Of World .apk</a>&nbsp;for android version from 11</p>
+<p>Intro Video:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FLQHqIJULN4o&amp;t=ZDRiYzFlYjIwYjdhNWRjOGQ5ODM5YzU1OGNlMTM3MDZkNDI3NWRhYSxoVGw5ZFk2TQ%3D%3D&amp;b=t%3ATXUgHeQQIHmQi7l6U0-Zxg&amp;p=https%3A%2F%2Fassistantofworld.tumblr.com%2Fpost%2F174593164038%2Fthe-app-assistant-of-world">https://youtu.be/LQHqIJULN4o</a></p>
+<p>Features: &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<br />&nbsp; - Allow to show status icon that is listening questions when the assistant activated<br />&nbsp; - Allow to double click on the home screen of your smartphone to enable hoặc disable it<br />&nbsp;&nbsp;- Allow to update or check keyword of questions<br />&nbsp; - Allow to view list of keywords following selected question<br />&nbsp; - Allow to search songs following name and try to play<br />&nbsp; - Allow to change recognizing question accuracy percent<br />&nbsp; - Allow to add new question names for each question code<br />&nbsp; - Allow to share in social network<br />&nbsp;&nbsp;- Allow to view the app help</p>
+<p>Supported questions for the world:<br />&nbsp; - Price of Gold: show by text and voice sound &lsquo;Price of gold&rsquo; in your country by USD<br />&nbsp; - Price of USD: show result currency of your country<br />&nbsp;&nbsp;- What is today[ in city_name] : show current date of the city where you are living or current date of the city 'city_name&rsquo;<br />&nbsp;&nbsp;- What is the time[ in city_name]: show current time of the city where you are living or current time of the city 'city_name&rsquo;<br />&nbsp;&nbsp;- What is the lunar date today[ in country_name]: show lunar date today of the country where you are living or of the country 'country_name&rsquo;<br />&nbsp;&nbsp;- What is the weather[ in city_name]: show current weather of the city where you are living or of the city 'city_name&rsquo;<br />&nbsp;&nbsp;- Describe about 'keyword&rsquo;( example: Describe about smartphone): show description about 'keyword&rsquo;. 'keyword&rsquo; can be added to before requiring&nbsp;<br />&nbsp;&nbsp;- Price of 'goods_name&rsquo;[ in country_name]: ( example: price of banana or price of banana in england) show result of the country where you are living or of the country 'country_name&rsquo;<br />&nbsp;&nbsp;- List of ( Best, Top, Top ten, Most or Hostest) 'keyword&rsquo; (example: Best songs of all time): show list of 'keyword&rsquo;. List is got in the web 'www.thetoptens.com&rsquo;<br />&nbsp;&nbsp;- News in 'keyword&rsquo; (keyword: world, nation, business, entertainment, sport, Technology, Science, Health): show news in 'keyword&rsquo;. The news is got in the web 'www.news.google.com&rsquo;&nbsp;<br />&nbsp;&nbsp;- Today in history: show popular events in history. The data is got in the web 'www.onthisday.com&rsquo;&nbsp;<br />&nbsp;&nbsp;- Play song 'song_name&rsquo;: play the song that is named 'song_name&rsquo;. Song 'song_name&rsquo; must to have in soudcloud.com<br />&nbsp;&nbsp;- Play again: play again before played song<br />&nbsp;&nbsp;- Read again ( or repeat): read before read result<br />&nbsp;&nbsp;- Call to 'contact_name&rsquo;: Call phone to person that is named 'contact_name&rsquo;. 'contact_name&rsquo; must to be had in the Contacts of phone<br />&nbsp;&nbsp;- Find path from ( road_name1) to (road_name2) ( or how to go from 'roard1&rsquo; to 'road2&rsquo;). Before road_name must to be declared if want to be exact ( Example: how to go from Phao Dai lang to Lang Ha)</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.movapp.office" strPackage="com.movapp.office" strApkUrl="http://bit.ly/MiniDocsViewer_InOD">
+<td id= "td_com.movapp.office" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Mini Docs Viewer</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.movapp.office" style="display:none"><td colspan=4>
+<p>The app &lsquo;Mini Docs Viewer&rsquo; allows to view and comment any kind of documents<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fv5758.app.goo.gl%2FDocsViewer&amp;t=NTMxMTkzNDRiYjU2YWUyYmVmZGMyY2Q3NjdlMjc4ZmFiNGFiYTU4NSw4WEQ2VjJnTA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989820306%2Fthe-app-mini-docs-viewer" target="_blank">MiniDocsViewer.apk</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FQWTg7VbcxEY&amp;t=OWUyNDFjMjY5NDdkNWZmYmVkM2NjNzNlNzNjYWU2Yjc5YTYwYzQyYyw4WEQ2VjJnTA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989820306%2Fthe-app-mini-docs-viewer">https://youtu.be/QWTg7VbcxEY</a><br /><br />Features:<br />&nbsp;&nbsp; - Support documents:&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp; Microsoft Excel (XLS / XLT, XLSX / XLTX / XLSM)<br />&nbsp;&nbsp;&nbsp;&nbsp; Microsoft Word (DOC / DOT / RTF, DOCX / DOTX / DOCM)<br />&nbsp;&nbsp;&nbsp;&nbsp; Microsoft PowerPoint (PPT / POT, PPTX / POTX / PPTM)<br />&nbsp;&nbsp;&nbsp;&nbsp; OpenOffice and LibreOffice<br />&nbsp;&nbsp;&nbsp;&nbsp; OpenDocument (ODT / ODS / ODP / ODG / ODF)<br />&nbsp;&nbsp;&nbsp;&nbsp; HyperText Markup Language (HTML)<br />&nbsp;&nbsp;&nbsp;&nbsp; Portable Document Format (PDF) JPG / GIF / PNG / BMP &nbsp; - Allow to copy text, highlight, underline, strike-out, and search text<br />&nbsp; &nbsp;- Allow to share documents<br />&nbsp; &nbsp;- Allow to manager files</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.scrfaapp.screenrecorder" strPackage="com.scrfaapp.screenrecorder" strApkUrl="http://bit.ly/ScreenRecorder_InOD">
+<td id= "td_com.scrfaapp.screenrecorder" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Screen Recorder for All</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.scrfaapp.screenrecorder" style="display:none"><td colspan=4>
+<p>The app &lsquo;Screen Recorder for All&rsquo; allows to record screen when using smartphone such as playing games or apps<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.scrfaapp.screenrecorder&amp;t=M2QyMzQ2MWU4ZGVmNDI2NTJlNTc1NzcwZTMxNWM4OTc5ZmMyZTljOSxXVUs0Rjh3cw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990481456%2Fthe-app-screen-recorder-for-all">https://play.google.com/store/apps/details?id=com.scrfaapp.screenrecorder</a></p>
+<p>Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FHXX1TYQqQGQ&amp;t=YTVmNGI2N2Q1MzMyNDJhNzA1MjNkNTA4YjcxN2Y2YmMyNWVjY2FlNyxXVUs0Rjh3cw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990481456%2Fthe-app-screen-recorder-for-all">https://youtu.be/HXX1TYQqQGQ</a></p>
+<p>Features:<br />&nbsp;&nbsp; - Allow to show buttons start, stop record on Home Screen<br />&nbsp;&nbsp;- Allow to manage videos to delete, rename, play again, share or modify<br />&nbsp;&nbsp;- Allow to modify recorded videos ( trim, remove middle, add subtitle, intro, music, background image, crop, speed, retate )<br />&nbsp;&nbsp; - Allow to create live video to youtuve, facebook or twitch<br />&nbsp;&nbsp; - Allow to merge videos, convert video to gif, edit image, stitch images, create http port to transfer videos to other smartphone or pc<br />&nbsp;&nbsp; - Allow to config settings ( video resolution, quality, rate, orientaion, record audio, countdown to start record, create video editor shotcut )</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>		
+<tr id="tr_com.ttsapp.note" strPackage="com.ttsapp.note" strApkUrl="http://bit.ly/SpeechToTextNotes_InOD">
+<td id= "td_com.ttsapp.note" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Speech to Text Notes</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.ttsapp.note" style="display:none"><td colspan=4>
+<p>The app &lsquo;Speech to Text Notes&rsquo; allows to create new, save and share notes by voice<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ttsapp.note&amp;t=YjIwNzg5YzJkYjBiODg0MTYzZTFiOGVlMTRjZDQzMDQ1ZTdlNWU3NyxEMFpyQ1dHVQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990384371%2Fthe-app-speech-to-text-notes">https://play.google.com/store/apps/details?id=com.ttsapp.note</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2F4CL-ZgX6CWQ&amp;t=N2JjNWUyYThjMjk3MTI2ZTE0ZTBjZWJlMzA1MTg4ZDAyMjAzMTI3NSxEMFpyQ1dHVQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990384371%2Fthe-app-speech-to-text-notes">https://youtu.be/4CL-ZgX6CWQ</a><br /><br />Features:<br />&nbsp; - Allow to record voice and convert to text to create new notes<br />&nbsp; - Allow to save new notes to file in folder sdcard/STT Note<br />&nbsp; - Voice to convert to text may be reconigzed from more than 141 languages that is selected in settings<br />&nbsp; - Allow to share selected note or all notes to social network<br />&nbsp; - Allow to change UI language in settings<br />&nbsp; - Allow to config to remider in settings</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.mpbcapp.mobileprint" strPackage="com.mpbcapp.mobileprint" strApkUrl="http://bit.ly/MobilePrintBasedChrome_InOD">
+<td id= "td_com.mpbcapp.mobileprint" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Mobile Print (based on Chrome)</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.mpbcapp.mobileprint" style="display:none"><td colspan=4>
+<p>The app &lsquo;Mobile Print&rsquo; allows to print any documents through chrome<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.mpbcapp.mobileprint&amp;t=YzZmZGI0OTg5YjdlYjNhYTU2ZmI1OTJlNGEyNmMwMDRlZWFiMTZmMyxQcDJYaUVwYQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006124586%2Fthe-app-mobile-print">https://play.google.com/store/apps/details?id=com.mpbcapp.mobileprint</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FI4v_ACycG_c&amp;t=MjRiM2M4MGExNGYyODQ4YzdhMjhjYzhhMGM0MjA5ZjBiZDJiZmU5NixQcDJYaUVwYQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006124586%2Fthe-app-mobile-print">https://youtu.be/I4v_ACycG_c</a></p>
+<p>Features:<br />&nbsp;&nbsp; - Allow to manage printers based google cloud account<br />&nbsp;&nbsp; - Allow to manage print jobs<br />&nbsp;&nbsp; - Allow to select files to print from sdcard or cloud drives ( facebook, dropbox, google drive, onedrive)<br />&nbsp;&nbsp; - Allow to print from documents ( doc, xls, txt, pdf, ppt, &hellip;), images, sms, contacts<br />&nbsp;&nbsp; - Allow to edit text , capture images from camera or draw images to print<br /><br />How to config print in browser Chrome:<br />&nbsp; - Open Chrome<br />&nbsp; - Login google with a user gmail.com<br />&nbsp; - Enter chrome://devices on address bar<br />&nbsp; - Add connected print to google cloud</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.stoapp.textocr" strPackage="com.stoapp.textocr" strApkUrl="http://bit.ly/SmartTextOCR_InOD">
+<td id= "td_com.stoapp.textocr" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Smart Text OCR</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.stoapp.textocr" style="display:none"><td colspan=4>
+<p>The app &lsquo;Smart Text OCR&rsquo; allows to extract text from image from more 50 than languages<br /><br />Link to download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.stoapp.textocr&amp;t=MWIxOTA1ZmEwMDIwMWQ1OGM3ZWUyNjkxMjM5NTFlOTBhYmFmN2Y5NSxCTllmdTdRbw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005805191%2Fthe-app-smart-text-ocr">https://play.google.com/store/apps/details?id=com.stoapp.textocr</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2Fbv6BsFEBSvU&amp;t=YzhlOWE2ZWVhM2UxYTRhYTcxMDRjYjNlZDlmOWViNWE5MjNiMjBlYSxCTllmdTdRbw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005805191%2Fthe-app-smart-text-ocr">https://youtu.be/bv6BsFEBSvU</a></p>
+<p>Features:<br />&nbsp; - Allow to select image from sdcard or capture image by camera&nbsp;<br />&nbsp; - Allow to scan and select one of more than 50 languages and then extract text<br />&nbsp; - Allow to edit extracted text<br />&nbsp; - Allow to copy extracted text to clipboard<br />&nbsp; - Allow to share extracted text to social network<br />&nbsp; - Allow to convert extracted text to pdf and open it<br />&nbsp; - Allow to convert extracted text to voice<br />&nbsp; - Allow to translate extracted text to other language</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.sduapp.smartdiskusage" strPackage="com.sduapp.smartdiskusage" strApkUrl="http://bit.ly/SmartDiskUsage_InOD">
+<td id= "td_com.sduapp.smartdiskusage" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Smart Disk Usage</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.sduapp.smartdiskusage" style="display:none"><td colspan=4>
+<p>The app &lsquo;Smart Disk Usage&rsquo; allows to manage and analysis smartphone storages by size<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.sduapp.smartdiskusage&amp;t=ZjMzYzM1MWJlNGVkMDBlNzUzNWNmMjk3ZGQ4NmE4ZTRkOWRmNGVjOSx3T1I5ZkJZMA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006034831%2Fthe-app-smart-disk-usage">https://play.google.com/store/apps/details?id=com.sduapp.smartdiskusage</a></p>
+<p>Intro Video:&nbsp; <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FLnbhS5SinrA&amp;t=ZDAwMWRmMTUwOGU5OTQyZjFiNDc4N2QyMmFmNzM4NTczZjA3OWM5Myx3T1I5ZkJZMA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174006034831%2Fthe-app-smart-disk-usage">https://youtu.be/LnbhS5SinrA</a></p>
+<p>Features:<br />&nbsp; - Allow to show files and folders by categories ( order by type, size or date)<br />&nbsp; - Allow to show storages by pie charts<br />&nbsp; - Allow to show files by folders<br />&nbsp; - Allow to search files by name<br />&nbsp; - Allow to show biggest files by top 10, 50 or 100&nbsp;<br />&nbsp; - Allow to view details, delete and open files<br /><br /><br /></p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.rmcapp.mirror" strPackage="com.rmcapp.mirror" strApkUrl="http://bit.ly/RealMirrorCamera_InOD">
+<td id= "td_com.rmcapp.mirror" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Real Mirror Camera</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.rmcapp.mirror" style="display:none"><td colspan=4>
+<p>The app 'Real Mirror Camera' Allow to look at yourself as in mirror</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.rmcapp.mirror</a></p>
+<p><br />Features:<br />- Allow to change light of photo<br />- Allow to zoom in/out<br />- Allow to view all captured images in gallery<br />- Allow to share photos through social or email</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.szcapp.zoomcamera" strPackage="com.szcapp.zoomcamera" strApkUrl="http://bit.ly/SmartZoomCamera_InOD">
+<td id= "td_com.szcapp.zoomcamera" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Smart Zoom Camera</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.szcapp.zoomcamera" style="display:none"><td colspan=4>
+<p>The app 'Smart Zoom Camera' allows to take photos even with zoom x50</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.szcapp.zoomcamera</a></p>
+<p>Features:<br />&nbsp; - Allow camera effect: None, Mono, Negative, Sepia, Aqua, Whiteboard, Blackboard<br />&nbsp; - Allow camera effect scene: Auto, Portrait, Landscape, Night, Night-portrait, Theatre, Beach, Snow, Sunset, Steadyphoto, Fireworks, Sports, Candleleight, Hdr<br />&nbsp; - Allow white balance: Auto, Incandescent, Fluorescent, Daylight, Cloudy-dailight, Twilight, Shade"</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.gqxvapp.gieoque" strPackage="com.gqxvapp.gieoque" strApkUrl="http://bit.ly/GieoQueXemViec_InOD">
+<td id= "td_com.gqxvapp.gieoque" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Gieo quẻ xem việc</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.gqxvapp.gieoque" style="display:none"><td colspan=4>
+<p>Ứng dụng 'Gieo quẻ xem việc' cho ph&eacute;p khấn, gieo quẻ, xem kết quả v&agrave; lời giải th&iacute;ch về quẻ đ&oacute; đối với hiện thực h&agrave;ng ng&agrave;y ( Vận Mệnh, T&igrave;nh Y&ecirc;u, Gia Trạch, Ph&aacute;p Luật, Chuyển Nh&agrave;, Cầu T&agrave;i, Giao Dịch, Kiện Tụng, Đường Con C&aacute;i, Mất Của, Thay Đổi, H&ocirc;n Nh&acirc;n, Người Đi Xa, T&igrave;m Người, Bệnh Tật)</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.gqxvapp.gieoque</a></p>
+<p>C&aacute;c bước sử dụng:<br />&nbsp; - Khấn<br />&nbsp; - Lấy quẻ<br />&nbsp; - Xem kết quả<br />&nbsp; - B&igrave;nh giải<br />&nbsp; - Chia sẻ m&agrave;n h&igrave;nh nếu th&iacute;ch"</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.msapp.scanner" strPackage="com.msapp.scanner" strApkUrl="http://bit.ly/MobileScanner_InOD">
+<td id= "td_com.msapp.scanner" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Mobile Scanner</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.msapp.scanner" style="display:none"><td colspan=4>
+<p>The app 'Mobile Scanner' alllow to scan documents or anything with your android smartphone</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.msapp.scanner</a></p>
+<p>Features:<br />&nbsp; - Allow to scan with 4 modes: color, magic color, grayscale and black &amp; white<br />&nbsp; - Allow to scan using voice<br />&nbsp; - Allow to detect page edges automatically<br />&nbsp; - Allow to rotation, mirror or flip effect<br />&nbsp; - Allow to extract text from Image<br />&nbsp; - Allow to save documents in PDF or JPG format<br />&nbsp; - Allow to cloud upload<br />&nbsp; - Allow to move, rename, copy, delete documents<br /><br /></p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.rbsapp.readspeech" strPackage="com.rbsapp.readspeech" strApkUrl="http://bit.ly/ReadBySpeech_InOD">
+<td id= "td_com.rbsapp.readspeech" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Read by Speech</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.rbsapp.readspeech" style="display:none"><td colspan=4>
+<p>The app &lsquo;Read by speech&rsquo; allows to read text by opening files, web links<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.rbsapp.readspeech</a></p>
+<p>Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FRSxzDd7dsUI&amp;t=MjM2MTYyZDk4N2JlM2YzNGY2OTkzOTM2NWQzN2FiYzlhZDViZjNkZCxFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://youtu.be/RSxzDd7dsUI</a><br /><br />Features:<br />&nbsp;&nbsp; - Allow to read by 3 mode: speed reading, text-to-speech voice, regular<br />&nbsp;&nbsp; - Support formats: epub, fb2, txt, html<br />&nbsp;&nbsp; - Allow to extract content from files or web pages<br />&nbsp;&nbsp; - Allow to manage recent files, recent links and bookmarks<br />&nbsp;&nbsp; - Allow to lock of the screen orientation in the reader<br />&nbsp;&nbsp; - Allow to change text size<br />&nbsp;&nbsp; - Allow change themes light/day and dark/night<br />&nbsp;&nbsp; - Allow to auto detect book encoding.</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>
+<!------------------------------------------------>	
+<tr id="tr_com.bcmnapp.boith" strPackage="com.bcmnapp.boith" strApkUrl="http://bit.ly/BoiChoMoiNguoi_InOD">
+<td id= "td_com.bcmnapp.boith" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Bói cho mọi người</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.bcmnapp.boith" style="display:none"><td colspan=4>
+<p>Ứng dụng 'B&oacute;i cho mọi người' cho ph&eacute;p xem b&oacute;i theo mọi thể loại v&agrave; nhiều thứ li&ecirc;n quan</p>
+<p>Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rbsapp.readspeech&amp;t=ZjUyM2FiODA5ZTE4NzNmZDgyNDM0Yjg3ZTM2NTkwMjEyZTRiMTNlYixFODk5NVRBaA%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174005413291%2Fthe-app-read-by-speech">https://play.google.com/store/apps/details?id=com.bcmnapp.boith</a></p>
+<p>C&aacute;c đặc điểm:<br />&nbsp; - Cho ph&eacute;p xem tử vi trọn đời theo ng&agrave;y sinh<br />&nbsp; - Cho ph&eacute;p xem c&aacute;c th&ocirc;ng tin Hung vận, C&aacute;t vận, Sự nghiệp, T&agrave;i lộc, T&igrave;nh cảm, Sức khỏe, Vận tr&igrave;nh từng tuổi theo tuổi<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i t&igrave;nh y&ecirc;u bằng họ t&ecirc;n ng&agrave;y sinh của nam nữ y&ecirc;u nhau<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i theo t&iacute;nh c&aacute;ch qua m&agrave;u sắc gh&eacute;t, nội t&acirc;m, cử chỉ, mắt, chọn c&acirc;y, l&ocirc;ng m&agrave;y, b&agrave;n tay<br />&nbsp; - Cho ph&eacute;p xem sim số đẹp<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i về t&ecirc;n của con qua t&ecirc;n con, ng&agrave;y sinh con, bố mẹ<br />&nbsp; - Cho ph&eacute;p đo&aacute;n &yacute; nghĩ c&aacute;c giăc mộng<br />&nbsp; - Cho ph&eacute;p giải m&atilde; c&aacute;c điềm b&aacute;o<br />&nbsp; - Cho ph&eacute;p xem tướng qua d&aacute;ng đi, m&oacute;ng tay, l&ocirc;ng m&agrave;y, ng&oacute;n tay, tướng mạo<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i qua xin thẻ s&oacute;c<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i qua nốt ruồi<br />&nbsp; - Cho ph&eacute;p xem b&oacute;i qua họ t&ecirc;n<br />&nbsp; - Cho ph&eacute;p xem tử vi qua ng&agrave;y sinh<br />&nbsp; - Cho ph&eacute;p xem lịch vạn sự, đổi ng&agrave;y &acirc;m dương, văn khấn</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>	
+<!------------------------------------------------>	
+<tr id="tr_com.ralbapp.books" strPackage="com.ralbapp.books" strApkUrl="http://bit.ly/ReadandListenBook_InOD">
+<td id= "td_com.ralbapp.books" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Read and Listen Book</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.ralbapp.books" style="display:none"><td colspan=4>
+<p>The app &lsquo;Read and Listen Book&rsquo; allows to read and listen online free books<br /><br />Link download:&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ralbapp.books&amp;t=YTEzZWYzODNmY2JiYzJhZWIwZGEyOGU5NWYxOTU4MWZmOTQ0NzUxYyxYYkh2Q2NqNw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990791951%2Fthe-app-read-and-listen-book">https://play.google.com/store/apps/details?id=com.ralbapp.books</a></p>
+<p>Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2FSAYMN2Lrhms&amp;t=YmZkMzU4ZGMwMGY1NzE4MjI1OWY2NzAwZDVhMWZiZDUzNDkzYWEwMixYYkh2Q2NqNw%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173990791951%2Fthe-app-read-and-listen-book">https://youtu.be/SAYMN2Lrhms</a></p>
+<p>Features:<br />&nbsp; - Allow to show newest read book in the first screen<br />&nbsp; - Allow to show popular and new books by list<br />&nbsp; - Allow to show books by selected category&nbsp;<br />&nbsp; - Allow to show list of read books history&nbsp;<br />&nbsp; - Allow to search by book name&nbsp;</p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>	
+<!------------------------------------------------>	
+<tr id="tr_com.fcapp.financialcals" strPackage="com.fcapp.financialcals" strApkUrl="http://bit.ly/FinancialCals_InOD">
+<td id= "td_com.fcapp.financialcals" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Financial Cals</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.fcapp.financialcals" style="display:none"><td colspan=4>
+<p>The app &lsquo;Financial Calcs&rsquo; allows to calculate things about financial such as Investment, Loan/Mortgage, Retirement, Stock, Credit Card, Auto Loan and Lease, Miscellaneous<br /><br />Link download: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.fcapp.financialcals&amp;t=NzE3ZDU3ZTUzOTQ0NDQwNDRiZGY0ZTlmYWViYzdiNmIzNWE2M2NkZixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://play.google.com/store/apps/details?id=com.fcapp.financialcals</a><br /><br />Link video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2Fveh36eK9ZXs&amp;t=MzA0NzU5NmI1MTQwMjFmNjNmNDQxMWViMjRlMjJmYjY1YmZhNWMzOCxPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://youtu.be/veh36eK9ZXs</a><br /><br />Best android apps: <br /><a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />or<br /><a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>	
+<!------------------------------------------------>	
+<tr id="tr_com.fdapp.financial" strPackage="com.fdapp.financial" strApkUrl="http://bit.ly/FinancialDictionary_InOD">
+<td id= "td_com.fdapp.financial" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">Financial Dictionary</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.fdapp.financial" style="display:none"><td colspan=4>
+<p>The app &lsquo;Financial Dictionary&rsquo; allows to view description of concepts in the financial sector<br /><br />Link download <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.fdapp.financial&amp;t=MTFmNGI5MDk2MDM0NmU1MDc0YmQ2MWI3N2E0ZTM2NDRmYTIxZjY5NSw3TjNIUmZnNQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989915616%2Fthe-app-financial-dictionary">https://play.google.com/store/apps/details?id=com.fdapp.financial</a><br /><br />Intro Video: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fyoutu.be%2Fveh36eK9ZXs&amp;t=ODQ4ZWVjZGVlZTRkMTJkM2ZhNzMzNTBjNWFjMmQyYmI1NjVjMDg1Yiw3TjNIUmZnNQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F173989915616%2Fthe-app-financial-dictionary">https://youtu.be/veh36eK9ZXs</a></p>
+<p>Best android apps: <br />&nbsp;<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fm.facebook.com%2FAndroidVN2018%2F&amp;t=NTcyZWUxNWQwNzIxNWQxNWY1YzU3ZmJlN2E4ZDUxN2NiODY1ZGM0YixPeEdFUEV0MQ%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174840442681%2Fthe-app-financial-calcs">https://m.facebook.com/AndroidVN2018/</a><br />&nbsp;&nbsp;&nbsp;or<br />&nbsp;<a href="https://androidvn.tumblr.com">https://androidvn.tumblr.com</a></p>
+</td></tr>	
+<!------------------------------------------------>	
+<tr id="tr_com.qrabapp.qrbarcode" strPackage="com.qrabapp.qrbarcode" strApkUrl="http://bit.ly/QRandBarcodeScanner_InOD">
+<td id= "td_com.qrabapp.qrbarcode" onclick= "showHiddenDesc(this)" ondblclick= "openOrInstallApp(this);">QR and Barcode Scanner</td>
+<td align=center><img width=23 height=17 src="images/uninstall.png" tag="Uninstall" onclick= "unInstall(this);"></td>
+<td align=center><img width=23 height=17 src="images/install.png" tag="Install" onclick= "install(this, '0');"></td>
+<td align=center><img width=23 height=17 src="images/un-install.png" tag="Uninstall-Install" onclick= "install(this, '1')"></td>
+</tr>
+<tr id="trDesc_com.qrabapp.qrbarcode" style="display:none"><td colspan=4>
+<p>The app &lsquo;QR and Barcode Scanner&rsquo; allows to scan QR code and Barcode from a image and camera<br /><br />Link download: <a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.qrabapp.qrbarcode&amp;t=NWE1N2EwZTNmNmE3ZDYwOGY2OGI2MWVmM2NhYWE2NzM1ZDlhNjliOCxZdkozN01yZg%3D%3D&amp;b=t%3ArAviARyC5FTBtE-3B1T5jA&amp;p=https%3A%2F%2Fandroidvn.tumblr.com%2Fpost%2F174846031746%2Fthe-app-qr-and-barcode-scanner">https://play.google.com/store/apps/details?id=com.qrabapp.qrbarcode</a><br /><br />Features:<br />&nbsp; - Allow to scan QR code and Barcode from camera<br />&nbsp; - Allow to scan QR code and Barcode from a image<br />&nbsp; - Allow to show history of scanning<br /><br />Best android apps: <br />&nbsp;https://m.facebook.com/AndroidVN2018/<br />&nbsp;&nbsp; or<br />&nbsp;https://androidvn.tumblr.com</p>
+</td></tr>	
+<!------------------------------------------------>	
+</tbody>
+</table>
+<p>
+<fieldset id="fsNewApp">
+<legend id= "lgNewApp">New App Info</legend>
+<form class="form-inline">
+   <div class="form-group row" style="margin-top:3px">
+    <label class="sr-only"  for="txtAppName" class="col-sm-1 col-form-label">App Name</label>
+    <div class="col-sm-3">
+ 		<input type="text" class="form-control mb-2 mr-sm-2" id="txtAppName" placeholder="App Name">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label class="sr-only"  for="txtPackage" class="col-sm-1 col-form-label">Package</label>
+    <div class="col-sm-3">
+ 		<input type="text" class="form-control mb-2 mr-sm-2" id="txtPackage" org="" placeholder="Package">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="sr-only"  for="txtUrl" class="col-sm-1 col-form-label">App File Url</label>
+    <div class="col-sm-3">
+ 		<input type="text" class="form-control mb-2 mr-sm-2" id="txtUrl" placeholder="App File Url">
+    </div>
+  </div>    
+  <div class="form-group row">
+     <div class="col-sm-3">
+  		<div contenteditable="true" class="divEdit form-control mb-2 mr-sm-2" id="txtDesc" placeholder="Description" style="color:#999999" onfocus="onDivEditFocus(this);" onblur="onDivEditBlur(this)" >
+  	     Enter description about app ( can paste formated in word text)
+		</div>
+	 </div>
+  </div>   
+  <button type="Button" class="btn btn-primary mb-2" onclick="addApp();" >Add</button>  
+  <button type="Button" class="btn btn-primary mb-2" onclick="updateApp();" >Update</button>  
+  <button type="Button" class="btn btn-primary mb-2" onclick="removeApp();" >Remove</button>
+</form>
+</fieldset>
+</p>
+<div class="container">
+<div id="snackbar" ></div>
+</div>
+<span id="spn1"></span>
+<p id="demo" style='color:green'></p>
 </body>
+<script language='javascript'>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Uninstall successfully";
+}
+function notifyUninstall(strPackage, strIsSuccess)
+{
+	//spn1.innerText= strIsSuccess;
+	var pg=document.getElementById("pg" + strPackage);
+	if (strIsSuccess=="1")
+	{
+		pg.style.width= '100%';
+		pg.innerText= "Uninstalling app '" + strPackage + "' successfully";
+		notifyCheckPackageExists(strPackage, "0");
+	}else if (strIsSuccess=="0")
+	{
+		pg.style.width= '100%';
+		pg.innerText= "Uninstalling siliently app '" + strPackage + "' fail";
+	}else if (strIsSuccess=="2")
+	{
+		pg.style.width= '100%';		
+		pg.innerText= "Uninstalling app '" + strPackage + "' successfully";
+		//pausecomp(1000);
+		//pg.style.width= '0%';
+		//pg.innerText= "Downloading the app ( 0 - 0%)";	
+		//checkInstalledPackages(arrPackages, arrUrls);
+		notifyCheckPackageExists(strPackage, "0");
+
+		return;
+	}else if (strIsSuccess=="3")
+	{
+		pg.style.width= '100%';
+		pg.innerText= "Uninstalling siliently app " + strPackage + "' fail";
+		//pausecomp(1000);
+		//pg.style.width= '0%';
+		//pg.innerText= "Downloading the app ( 0 - 0%)";			
+		//checkInstalledPackages(arrPackages, arrUrls);		
+
+		
+		return;		
+	}	
+
+	checkInstalledPackages(arrPackages, arrUrls);
+}
+
+function notifyInstall(strPackage, strIsSuccess)
+{
+	var pg=document.getElementById("pg" + strPackage);
+	//spn1.innerText= ;
+	if (pg==null)
+	{
+		return;	
+	}
+	if (strIsSuccess=="1")
+	{
+		pg.innerText= "Installing app '" + strPackage + "' successfully";
+		notifyCheckPackageExists(strPackage, "1");
+	}else if (strIsSuccess=="0")
+	{
+		pg.innerText= "Installing app '" + strPackage + "' fail";
+		notifyCheckPackageExists(strPackage, "0");
+	}else 
+	{
+		pg.innerText= strIsSuccess;
+		//notifyCheckPackageExists(strPackage, "0");
+	}
+	//checkInstalledPackages(arrPackages, arrUrls);
+}
+	
+function notifyInstallProgress(strPackage, dblProgress, strSpeed)
+{
+	var pg=document.getElementById("pg" + strPackage);	
+	//alert(dblProgress);
+	if (dblProgress=="1.1")
+	{
+		dblProgress=100;
+	}
+	if (pg!=null)
+	{
+		pg.style.width= dblProgress + '%';
+		pg.innerText= "Downloading the app ( " + strSpeed + " - " + dblProgress +  "%)";
+	}		
+}
+
+function notifyFileSize(strPackage, strFileSize)
+{
+	var tdpkg=document.getElementById("td_" + strPackage);
+	if (strFileSize!="" && strFileSize!="-1.0B" && tdpkg.innerText.indexOf("MB )") ==-1 && tdpkg.innerText.indexOf("KB )")==-1  )
+	{
+	   	tdpkg.innerText= tdpkg.innerText + "( " + strFileSize + " )";
+	    tdpkg.setAttribute("is_live", "1");
+	}else
+	{
+	   	tdpkg.setAttribute("is_live", "0");	
+	}
+}
+
+function notifyCheckPackageExists(strPackage, strIsExists)
+{	
+	var tdpkg=document.getElementById("td_" + strPackage);
+	//spn123.innerText=strPackage + blnInstalled + tdpkg.innerText;
+	if (strIsExists=="1")
+	{
+		//spn123.innerText=strPackage;
+		tdpkg.style.color="brown";
+		tdpkg.style.fontWeight = "bold";
+		tdpkg.setAttribute("strIsInstalled", "1");
+	}else{
+		tdpkg.style.color="black";
+		tdpkg.style.fontWeight = "normal";	
+		//spn123.innerText=strPackage + "1";		
+		tdpkg.setAttribute("strIsInstalled", "0");
+	}
+
+}
+function notifyOpenAppResult(strPackage, strResult)
+{
+	var pg=document.getElementById("pg" + strPackage);
+
+	if (strResult=="1")
+	{
+		//spn123.innerText=strPackage;
+		pg.style.width= '100%';
+		pg.innerText= "Opening the app successfully";		
+	}else{
+		pg.style.width= '100%';
+		pg.innerText= "The app isn't installed";		
+		//spn123.innerText=strPackage + "1";		
+	}
+}
+
+function addNewApp(strAppName, strPackage, strUrl, strDesc)
+{
+	var objtr=document.getElementById("tr_" + strPackage);	
+	if (objtr==null)
+	{
+		//spn1.innerText= "a" + intIndex1;
+		var objaddedtr= tblList.insertRow(1);
+
+		objaddedtr.outerHTML= "<tr id='tr_" + strPackage + "' is_new= '1' strPackage='" + strPackage + "' strApkUrl='" + strUrl + "'>" +
+							  "<td id= 'td_" + strPackage + "' onclick= 'showHiddenDesc(this); showDetail(this);' ondblclick= 'openOrInstallApp(this);'>" + strAppName +"</td>" +
+							  "<td align=center><img width=23 height=17 src='images/uninstall.png' tag='Uninstall' onclick= 'unInstall(this);'></td>" +
+							  "<td align=center><img width=23 height=17 src='images/install.png' tag='Install' onclick= 'install(this, 0);'></td>" +
+							  "<td align=center><img width=23 height=17 src='images/un-install.png' tag='Uninstall-Install' onclick= 'install(this, 1)'></td>" +
+							  "</tr>" +
+							  "<tr id='trDesc_" + strPackage + "' style='display:none'><td colspan=4>" +
+			                  "" + strDesc +
+							  "</td></tr>";
+		var objtrDesc=document.getElementById("trDesc_" + strPackage);	
+		objtrDesc.innerHTML= "<td colspan=4>" + objtrDesc.innerText + "</td>";
+		
+		arrPackages.push(strPackage);
+		arrUrls.push(strUrl);
+	}	
+}
+
+function notifyAddApp(strAppName, strPackage, strUrl, strDesc)
+{
+	if (strUrl=="")
+	{
+		showToast("App " + strAppName + " can be not added");
+	}else
+	{
+		addNewApp(strAppName, strPackage, strUrl, strDesc);
+		
+		showToast("App " + strAppName + " is added");
+	}
+}
+
+function notifyUpdateApp(strOrgPackage, strAppName, strPackage, strUrl, strDesc)
+{
+	if (strUrl=="")
+	{
+		showToast("The app '" + strAppName + "' can be not updated");
+	}else
+	{
+		var objtr=document.getElementById("tr_" + strOrgPackage);	
+		var objtd=document.getElementById("td_" + strOrgPackage);
+		var objtrDesc=document.getElementById("trDesc_" + strOrgPackage);
+				    
+		if (objtr!=null && objtd!=null && objtrDesc!=null)
+		{
+			//spn1.innerText= "a" + intIndex1;
+			if (strPackage!= strOrgPackage)
+			{
+				objtr.setAttribute("id", "tr_" + strPackage);
+				objtr.setAttribute("strPackage", strPackage);
+				objtd.setAttribute("id", "td_" + strPackage);		
+			    objtrDesc.setAttribute("id", "trDesc_" + strPackage);		
+			}
+
+			objtr.setAttribute("strApkUrl", strUrl);
+			objtd.innerHTML= strAppName;
+			objtrDesc.innerHTML= "<td colspan=4>" + strDesc + "</td>";
+			txtPackage.setAttribute("org", strPackage);
+		}
+
+		showToast("The app '" + strAppName + "' is updated");
+	}
+}
+
+function removeFromArray(arr, strValue) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === strValue) {
+            arr.splice(i, 1);
+            
+            return i;
+        }
+    }
+    return -1;
+}
+
+function notifyRemoveApp(strOrgPackage, strAppName, strResult)
+{
+	if (strResult!="1")
+	{
+		showToast("App " + strAppName + " can be not removed");
+	}else
+	{
+		var objtr=document.getElementById("tr_" + strOrgPackage);	
+				    
+		if (objtr!=null)
+		{
+			var intIndex1= objtr.rowIndex;
+			if (intIndex1!=-1)
+			{
+				tblList.deleteRow(intIndex1);
+			}
+			var objtrDesc=document.getElementById("trDesc_" + strOrgPackage);
+			
+			if (objtrDesc!=null)
+			{
+				var intIndex2= objtrDesc.rowIndex;
+				if (intIndex2!=-1)
+				{
+					tblList.deleteRow(intIndex2);
+				}
+			}
+		}
+
+		var inti= removeFromArray(arrPackages, strOrgPackage);
+		if (inti!=-1)
+		{
+			arrUrls.splice(inti, 1);
+		}
+		
+		txtAppName.value= "";
+    	txtPackage.value= "";
+        document.getElementById("txtPackage").setAttribute("org", "");
+    	txtUrl.value= "";
+    	txtDesc.innerHTML= "";
+    	
+		showToast("App " + strAppName + " is removed");
+	}
+}
+
+function notifyGetNewApps(strJson)
+{
+	var arr= JSON.parse(strJson.replace(/[\n\t\r]/g,''));
+	var arrPackage= [];
+	var arrUrl= [];
+		
+	for (var inti=0; inti< arr.length; inti++)
+	{
+		var obj= arr[inti];	
+		
+		addNewApp(obj.strAppName, obj.strPackage, obj.strUrl, obj.strDesc)
+		arrPackage.push(obj.strPackage);
+		arrUrl.push(obj.strUrl);		
+		//spn1.innerHTML= "" + arrPackage.length + "-" + arrUrl.length;
+	}
+	
+	getFileSizes(arrPackage, arrUrl);
+	checkInstalledPackages(arrPackage, arrUrl);
+}
+
+</script>
 </html>
